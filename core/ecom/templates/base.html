@@ -1,0 +1,6 @@
+{% for student in data %}
+    {{student.name}}
+    {{student.roll}}
+    {% for department in student.department.all %}
+    {% endfor %}
+{% endfor %}

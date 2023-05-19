@@ -1,0 +1,18 @@
+{% load static %}
+{% for product in data %}
+
+<head>
+
+</head>
+<img src="{{product.img.url}}" width="300px">
+<h1>{{product.name}}</h1>
+<p>{{product.description}}</p>
+<h3>Tags</h3>
+{% for tag in product.tags.all %}
+<li>{{tag.name}}</li>
+{% endfor %}
+<h3>Categories</h3>
+{% for category in product.category.all %}
+<li>{{category.name}}</li>
+{% endfor %}
+{% endfor %}
